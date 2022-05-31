@@ -1,7 +1,7 @@
 
 import { BsStars } from 'react-icons/bs'
 import TweetBox from './TweetBox'
-
+import Post from '../Post'
 
 const style = {
     wrapper: `flex-[2] border-r border-l border-[#38444d] overflow-y-scroll`,
@@ -10,6 +10,29 @@ const style = {
   }
 
 
+const tweets  = [{
+        displayName:'Shoab',
+        username: 'Shoab02',
+        avatar:'image.jpeg',
+        text:'gm',
+        timestamp: '2022-05-31T01:30:05Z',
+    },
+    {
+        displayName:'Shoab',
+        username: 'Shoab02',
+        avatar:'image.jpeg',
+        text:'gm',
+        timestamp: '2022-05-31T01:30:05Z',
+    },
+    {
+        displayName:'Shoab',
+        username: 'Shoab02',
+        avatar:'image.jpeg',
+        text:'gm',
+        timestamp: '2022-05-31T01:30:05Z',
+    }
+
+]
 
 
 
@@ -23,6 +46,17 @@ function Feed() {
 
         </div>
         <TweetBox/>
+
+        {tweets.map((tweet, index) => (
+            <Post
+                key = {index}
+                displayName={tweet.displayName}
+                userName={tweet.userName}
+                text={tweet.tweet}
+                avatar={tweet.profileImage}
+                timestamp={tweet.timestamp}
+            />
+        ))}
     </div>
     )
 }
