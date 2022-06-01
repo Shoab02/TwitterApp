@@ -1,5 +1,9 @@
 import { BsFillPatchCheckFill } from 'react-icons/bs'
-
+import { format } from 'timeago.js'
+import { FaRegComment, FaRetweet } from 'react-icons/fa'
+import { AiOutlineHeart } from 'react-icons/ai'
+import { FiShare } from 'react-icons/fi'
+import { useState } from 'react'
 
 
 const style = {
@@ -38,12 +42,30 @@ const style = {
                 <div>
                     <span className={style.headerDetails}>
                         <span className={style.name}>{displayName}
-                            <span className={style.verified}>
+                        </span>
+                        <span className={style.verified}>
                                 <BsFillPatchCheckFill />
-                            </span>
+                        </span>
+                        <span className={style.handleAndTimeAgo}>
+                                @{userName} • {format(new Date(timestamp).getTime())}
                         </span>
                     </span>
+                    <div className={style.tweet}>{text}</div>
 
+                </div>
+                <div className={style.footer}>
+                    <div className={`${style.footerIcon} hover:text-[#1d9bf0] hover:bg-[#1e364a]`}>
+                        <FaRegComment />
+                    </div>
+                    <div className={`${style.footerIcon} hover:text-[#03ba7c] hover:bg-[#1b393b]`}>
+                        <FaRetweet />
+                    </div>
+                    <div className={`${style.footerIcon} hover:text-[#f91c80] hover:bg-[#39243c]`}>
+                        <AiOutlineHeart />
+                    </div>
+                    <div className={`${style.footerIcon} hover:text-[#1d9bf0] hover:bg-[#1e364a]`}>
+                        <FiShare />
+                    </div>
                 </div>
             </div>
 
