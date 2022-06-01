@@ -1,6 +1,19 @@
-# Basic Sample Hardhat Project
+Smart contract - Using Solidity
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+
+### `The app can be used when you have a Metamask account.`
+https://metamask.io/
+
+### `If you are out of ether, you can request on the below link`
+https://fauceth.komputing.org/
+
+
 
 Try running some of the following tasks:
 
